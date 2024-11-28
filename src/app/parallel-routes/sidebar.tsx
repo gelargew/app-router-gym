@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Home, BarChart2, Users } from 'lucide-react'
+import { Home, BarChart2, Users, FileWarning } from 'lucide-react'
 import { useState, useEffect, useRef } from 'react'
 
 export function Sidebar() {
@@ -26,11 +26,11 @@ export function Sidebar() {
         {[
           { href: '/', label: 'Home', icon: <Home className="w-5 h-5" /> },
           { href: '/slide', label: 'Slide', icon: <BarChart2 className="w-5 h-5" /> },
-          { href: '/error', label: 'Error', icon: <Users className="w-5 h-5" /> },
+          { href: '/error', label: 'Error', icon: <FileWarning className="w-5 h-5" /> },
           { href: '/suspense', label: 'Suspense', icon: <Users className="w-5 h-5" /> },
           { href: '/parallel-routes', label: 'Parallel Routes', icon: <Users className="w-5 h-5" /> },
           { href: '/redirect', label: 'Redirect', icon: <Users className="w-5 h-5" /> },
-          { href: '/intercepting-route', label: 'Intercepting Route', icon: <Users className="w-5 h-5" /> },
+          { href: '/photos', label: 'Intercepting Route', icon: <Users className="w-5 h-5" /> },
         ].map((link, index) => (
           <Link
             key={link.href}
@@ -44,6 +44,7 @@ export function Sidebar() {
           </Link>
         ))}
       </nav>
+
     </div>
   )
 }

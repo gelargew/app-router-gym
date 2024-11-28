@@ -13,6 +13,26 @@ export default function Home() {
           <UserList />
         </Suspense>
       </ErrorBoundary>
+      <ErrorBoundary>
+        <Suspense fallback={<UserListSkeleton />}>
+          <UserList />
+        </Suspense>
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Suspense fallback={<UserListSkeleton />}>
+          <UserList />
+        </Suspense>
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Suspense fallback={<UserListSkeleton />}>
+          <UserList />
+        </Suspense>
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Suspense fallback={<UserListSkeleton />}>
+          <UserList />
+        </Suspense>
+      </ErrorBoundary>
     </main>
   )
 }

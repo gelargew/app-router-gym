@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
 import { Sidebar } from './parallel-routes/sidebar'
+import { Toaster } from '@/components/ui/sonner'
 
 const geistSans = localFont({
     src: './fonts/GeistVF.woff',
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-    children,
+    children
 }: Readonly<{
     children: React.ReactNode
 }>) {
@@ -31,6 +32,7 @@ export default function RootLayout({
             >
                 <Sidebar />
                 <div>{children}</div>
+                <Toaster />
             </body>
         </html>
     )
